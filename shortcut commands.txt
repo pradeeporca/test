@@ -1,0 +1,118 @@
+
+using custom workspace
+
+in Advanced Project option----->choose custom workspace
+
+------------
+
+security
+
+1.login using default admin user
+2.create the new user (which comes with super privilages)
+3.download RoleStrategy Plugin (Download the .hpi and paste to /jenkins/plugins directory) and restart 
+
+or from console upload the hpi file from ManageJenkins---->Manage Plugins---->choose to upload-----restart the Jenkins
+
+
+4. Choose the RoleBased Strategy
+Manage Jenkins---->Configure Golbal Security---->choose RoleBased Strategy ---->save
+
+after enabling rolebased strategy---->user1 will not able to login
+
+5. Manage Jenkins---->Manage and Assign Roles (will get after installing RoleBased Strategy)
+Global Role----->it provide access for all
+Project Role---->it provide access to projects/job level
+Slave Role
+---------------------------
+
+master/slave is required to ditribute the build accroess the technology app(c,java,dotnet)
+because java is platform independent
+dotnet will run only in windows
+
+master----->with windows(for dotnet) linux(java)
+
+----------------------
+
+
+shortcut for git commands with syntax
+
+git local
+1. Install the git client in windows
+
+2.creating the local repoistry
+C:\mygitrepo
+
+3.patching the C:\mygitrepo with git bash commands
+
+4.creating the directory---mymavenproject
+
+ git init mymavengitproject/
+
+creates .git inside mymavengitproject/
+
+ls .git
+
+
+copy the test.java to mymavengitproject/
+
+5. git status  --display unstached code----test.java
+
+6.git add .  -----to commit to staging
+
+7. test.java---committed
+
+8. git diff  ( try without commit to check the status)
+9.git log
+
+
+10. git config --global user.name "devopscloudtraining"
+11.git config --global user.email onlinetrainingtoindia@gmail.com
+12. git config --list
+
+----------
+github
+
+git config --global user.name "devopscloudtraining"
+git config --global user.email onlinetrainingtoindia@gmail.com
+create a empty repoistry in github then clone
+git clone git@github.com:devopscloudtraining/javarepo1.git
+
+/javarepo1 in local machines
+copy the src codes
+git status git add . git status
+
+to push to remote
+
+git remote add origin git@github.com:devopscloudtraining/javarepo1.git
+
+ git push -u origin master
+
+Enter passphrase for key '/c/Users/middleware/.ssh/id_rsa':
+Counting objects: 3, done.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 392 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To github.com:devopscloudtraining/javarepo1.git
+   713bd9b..a1c1a8f  master -> master
+Branch master set up to track remote branch master from origin.
+
+
+------------
+
+for pairing with keygen
+
+ssh-keygen -t rsa -C "onlinetrainingtoindia@gmail.com"
+remove the known_host file
+
+copy the key info on id_rsa.pub file and add the key to github---->setting--->ssh
+host will added
+-------------------
+
+
+
+
+jenkins with git
+
+install the Only GitPlugin
+
+
